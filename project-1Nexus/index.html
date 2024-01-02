@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Signup</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: url('th.jpg') center/cover no-repeat fixed;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.3); /* Adjust the alpha value for transparency */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 400px;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    .tab {
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .tab:hover {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    button {
+      background: #ee883b;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #e5562b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="tabs">
+      <div class="tab" onclick="showTab('login')">Login</div>
+      <div class="tab" onclick="showTab('signup')">Sign Up</div>
+    </div>
+    <div class="content">
+      <div id="login" class="form-group">
+        <label for="loginUsername">Username:</label>
+        <input type="text" id="loginUsername" placeholder="Enter your username">
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" placeholder="Enter your password">
+        <br>
+        <button onclick="login()">Login</button>
+      </div>
+      <div id="signup" class="form-group" style="display: none;">
+        <label for="signupUsername">Username:</label>
+        <input type="text" id="signupUsername" placeholder="Choose a username">
+        <label for="signupPassword">Password:</label>
+        <input type="password" id="signupPassword" placeholder="Choose a password">
+        <label for="signupPassword">Re Enter Password:</label>
+        <input type="password" id="signupPassword" placeholder="ReEnter password">
+        <br>
+        <button onclick="signup()">Sign Up</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      document.getElementById('login').style.display = tabId === 'login' ? 'block' : 'none';
+      document.getElementById('signup').style.display = tabId === 'signup' ? 'block' : 'none';
+    }
+
+    function login() {
+      // Add your login logic here
+      alert('Login clicked!');
+    }
+
+    function signup() {
+      // Add your signup logic here
+      alert('Sign Up clicked!');
+    }
+  </script>
+</body>
+</html>
